@@ -1,0 +1,63 @@
+name: Lint and Auto-Fix Code Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 2 * * 0" # Weekly on Sunday at 2 AM UTC
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  lint-and-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install linting tools
+        run: |
+          npm install -g markdownlint-cli prettier
+
+      - name: Fix trailing whitespace (all files)
+        run: |
+          find . -type f \
+            -not -path "*/node_modules/*" \
+            -not -path "*/.git/*" \
+            -not -path "*/docs/*" \
+            -exec sed -i 's/[[:space:]]*$//' {} +
+
+      - name: Fix PowerShell formatting
+        run: |
+          # Remove trailing spaces from PS1 files
+          find . -name "*.ps1" -type f -exec sed -i 's/[[:space:]]*$//' {} +
+
+      - name: Fix Markdown formatting
+        run: |
+          markdownlint --fix "**/*.md" --ignore node_modules || true
+
+      - name: Fix YAML formatting
+        run: |
+          prettier --write "**/*.{yml,yaml}" --ignore-path .gitignore || true
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "🤖 Auto-fix: trailing spaces, PowerShell/YAML formatting, markdown violations"
+          git push
