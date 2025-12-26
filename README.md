@@ -248,6 +248,8 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+Copyright © 2025 Hassan Rahman (Heyson315)
+
 ---
 
 <p align="center">
