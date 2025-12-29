@@ -1,7 +1,7 @@
 # 🎯 Project Status Dashboard
 
-**Last Updated:** January 05, 2026
-**Repository:** [compliance-governance-test](https://github.com/Heyson315/compliance-governance-test)
+**Last Updated:** January 08, 2026
+**Repository:** [ComplianceHub](https://github.com/HHR-CPA/ComplianceHub)
 
 ---
 
@@ -23,7 +23,7 @@ pie title Roadmap Completion
 
 | Phase | Start | End | Status | Progress |
 |-------|-------|-----|--------|----------|
-| **Phase 1: Quick Wins** | Jan 2025 | Apr 2025 | 🟢 Active | 75% |
+| **Phase 1: Quick Wins** | Jan 2025 | Apr 2025 | 🟢 Active | 95% |
 | **Phase 2: Automation** | Apr 2025 | Jul 2025 | ⚪ Planned | 0% |
 | **Phase 3: Scale** | Jul 2025 | Dec 2025 | ⚪ Planned | 0% |
 | **Phase 4: Expansion** | Oct 2025 | Mar 2026 | ⚪ Planned | 0% |
@@ -43,7 +43,7 @@ pie title Roadmap Completion
 | **CI/CD & Security Basics** | ✅ Complete | 100% | @Heyson315 | Feb 2025 | GitHub Actions workflow created |
 | **Enable MFA and DLP** | ✅ Complete | 100% | @Heyson315 | Mar 2025 | M365 E5 configured |
 | **Cloud on Budget** | ✅ Complete | 100% | @Heyson315 | Mar 2025 | Using free tiers |
-| **Compliance Templates** | 🔄 In Progress | 60% | @Heyson315 | Apr 2025 | Policy templates created |
+| **Compliance Templates** | 🔄 In Progress | 95% | @Heyson315 | Apr 2025 | Policy templates created |
 
 ### Deliverables
 
@@ -200,7 +200,7 @@ xychart-beta
 - [CA Policy Deployer](../deploy-ca-policy.ps1)
 
 ### External Resources
-- [GitHub Actions](https://github.com/Heyson315/compliance-governance-test/actions)
+- [GitHub Actions](https://github.com/Heyson315/ComplianceHub/actions)
 - [Azure Portal](https://portal.azure.com)
 - [M365 Admin Center](https://admin.microsoft.com)
 

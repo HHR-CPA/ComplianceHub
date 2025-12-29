@@ -1,9 +1,9 @@
 # **Lean Tech Roadmap for AI & Compliance Projects**
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/Heyson315/compliance-governance-test/ci.yml?branch=main&label=Build&logo=github)
+![Build Status](https://img.shields.io/github/actions/workflow/status/Heyson315/ComplianceHub/ci.yml?branch=main&label=Build&logo=github)
 ![Security Scan](https://img.shields.io/badge/Security-Passed-brightgreen?logo=github-actions)
 ![License](https://img.shields.io/badge/License-MIT-blue?logo=opensourceinitiative)
-![Last Commit](https://img.shields.io/github/last-commit/Heyson315/compliance-governance-test?logo=github)
+![Last Commit](https://img.shields.io/github/last-commit/Heyson315/ComplianceHub?logo=github)
 ![Compliance](https://img.shields.io/badge/Compliance-SOX%20%7C%20GDPR%20%7C%20HIPAA-orange?logo=checkmarx)
 
 ---
@@ -200,10 +200,10 @@ mindmap
 
 ```bash
 # Clone this repository
-git clone https://github.com/Heyson315/compliance-governance-test.git
+git clone https://github.com/Heyson315/ComplianceHub.git
 
 # Navigate to the project
-cd compliance-governance-test
+cd ComplianceHub
 
 # Review the roadmap and start with Phase 1
 ```

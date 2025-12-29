@@ -1,6 +1,6 @@
 ````instructions
 
-# Copilot Instructions for compliance-governance-test
+# Copilot Instructions for ComplianceHub
 
 ## Project Overview
 - **Purpose**: Lean tech roadmap and testing framework for AI & compliance projects. Provides PowerShell-based automation for Azure policy deployment, M365 E5 configuration, cross-tenant collaboration, and compliance monitoring for CPA firm environments.
@@ -73,7 +73,7 @@
 ### **GitHub Remote Setup** (`setup-github-remote.ps1`)
 ```powershell
 # Configure GitHub remote for repository
-.\setup-github-remote.ps1 -RepoUrl "https://github.com/Heyson315/compliance-governance-test.git"
+.\setup-github-remote.ps1 -RepoUrl "https://github.com/Heyson315/ComplianceHub.git"
 ```
 
 ### **Workspace Health Check** (`workspace-health-check.ps1`)
@@ -299,8 +299,8 @@ For each policy/control, document:
 ### **Setup**
 ```powershell
 # Clone repository
-git clone https://github.com/Heyson315/compliance-governance-test.git
-cd compliance-governance-test
+git clone https://github.com/Heyson315/ComplianceHub.git
+cd ComplianceHub
 
 # Install required PowerShell modules
 Install-Module -Name Az -Scope CurrentUser
